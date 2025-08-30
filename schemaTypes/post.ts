@@ -68,7 +68,11 @@ export default defineType({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        { type: 'block' },   // normal editor blocks
+        { type: 'image' },   // optional, agar content me image bhi allow karni ho
+        { type: 'table' },   // 👈 plugin ka table yaha add kiya
+      ],
     }),
   ],
   preview: {
